@@ -1,0 +1,23 @@
+# Rust
+target/
+**/*.rs.bk
+
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+
+# C++ build output
+cpp-rbtree/rbtree
+*.o
+*.obj
+*.dSYM/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
