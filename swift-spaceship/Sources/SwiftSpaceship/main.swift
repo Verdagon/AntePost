@@ -32,7 +32,6 @@ let ship = Spaceship(name: "Enterprise")
 launch(ship)
 assert(ship.engine.fuel == 100)
 print("Fuel: \(ship.engine.fuel)")
-print("OK")
 
-// Uncomment to see the runtime crash:
-// launchCrash(ship)
+// Now trigger the runtime crash:
+launchCrash(ship)

@@ -33,9 +33,8 @@ fn main() {
         assert_eq!(s, "zello");
         println!("Engine string: {}", s);
     }
-    println!("OK");
 
-    // Uncomment to see the runtime panic ("already borrowed: BorrowMutError"):
-    // let _guard = ship.borrow();
-    // launch(Rc::clone(&ship));
+    // Now trigger the runtime panic ("already borrowed: BorrowMutError"):
+    let _guard = ship.borrow();
+    launch(Rc::clone(&ship));
 }

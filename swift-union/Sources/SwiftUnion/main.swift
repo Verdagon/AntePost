@@ -44,7 +44,6 @@ if case let .stringTheory(s) = ship.engine {
     assert(s == "zello")
     print("Engine string: \(s)")
 }
-print("OK")
 
-// Uncomment to see the runtime crash:
-// launchCrash(ship)
+// Now trigger the runtime crash:
+launchCrash(ship)

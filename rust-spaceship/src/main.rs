@@ -29,9 +29,8 @@ fn main() {
     launch(Rc::clone(&ship));
     assert_eq!(ship.borrow().engine.fuel, 100);
     println!("Fuel: {}", ship.borrow().engine.fuel);
-    println!("OK");
 
-    // Uncomment to see the runtime panic ("already borrowed: BorrowMutError"):
-    // let _guard = ship.borrow();
-    // launch(Rc::clone(&ship));
+    // Now trigger the runtime panic ("already borrowed: BorrowMutError"):
+    let _guard = ship.borrow();
+    launch(Rc::clone(&ship));
 }
