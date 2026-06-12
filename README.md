@@ -13,6 +13,7 @@ Companion code for an article on [Ante](https://antelang.org/)'s approach to ble
 - `swift-union/` — same as `swift-spaceship` but with `Engine` as a Swift `enum`.
 - `rust-twomuts/` — minimal demo of Rust's compile-time rule against two simultaneous `&mut` to the same data. **Intentionally does not compile.**
 - `swift-twomuts/` — minimal demo of Swift's compile-time rule against two `inout` arguments aliasing. **Intentionally does not compile.**
+- `rust-cell/` — minimal demo of `Cell<T>`, Rust's workaround that gets close to "multiple mut references" via shared `&Cell` + `set`/`get`.
 
 ## Running
 
@@ -24,6 +25,7 @@ clang++ -std=c++17 cpp-rbtree/main.cpp -o cpp-rbtree/rbtree && ./cpp-rbtree/rbtr
 cargo run --manifest-path rust-rbtree/Cargo.toml
 cargo run --manifest-path rust-spaceship/Cargo.toml
 cargo run --manifest-path rust-union/Cargo.toml
+cargo run --manifest-path rust-cell/Cargo.toml
 
 swift run --package-path swift-spaceship
 swift run --package-path swift-union
